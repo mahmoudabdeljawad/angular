@@ -1,0 +1,26 @@
+<div class="container-fluid">
+<nav class="navbar navbar-expand-custom navbar-mainbg">
+    <a class="navbar-brand navbar-logo" href="#">Practice </a>
+    <button style="color: white !important; margin-right: 5px;" class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <mat-icon >apps</mat-icon>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+            <li class="nav-item active" >
+                <a routerLink="Home" class="nav-link active" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="Users" class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Users</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container" style="margin: auto;">
+    <router-outlet></router-outlet>
+</div>
+<div class="Footer">
+    <app-footer></app-footer>
+</div>
+
+</div>

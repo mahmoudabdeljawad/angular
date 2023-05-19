@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.BoxContatiner{
+    box-shadow: 2px 1px 17px 4px rgba(101,101,101,1);
+    -webkit-box-shadow: 2px 1px 17px 4px rgb(202, 196, 196);
+    border-radius: 50px;
+}

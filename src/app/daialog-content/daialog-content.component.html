@@ -1,0 +1,34 @@
+<form #f="ngForm" class="example-form " (ngSubmit)="SendData(f)">
+  <mat-form-field class="example-full-width" style="color: green;">
+    <mat-label>
+      Name
+    </mat-label>
+    <input matInput name="name" [(ngModel)]="user.Name"  #name="ngModel" required >
+  </mat-form-field>
+   <mat-form-field class="example-full-width" style="color: green;">
+    <mat-label>
+      Email
+    </mat-label>
+    <input matInput name="email" [(ngModel)]="user.Email"  #email="ngModel" required email>
+  </mat-form-field>
+
+   <mat-form-field class="example-full-width" style="color: green;">
+    <mat-label>
+      Password
+    </mat-label>
+    <input matInput name="password" [(ngModel)]="user.Password"  #password="ngModel" required>
+  </mat-form-field>
+   <mat-form-field class="example-full-width" style="color: green;">
+    <mat-label>
+      Age
+    </mat-label>
+    <input matInput type="number"  name="age" [(ngModel)]="user.Age" required [ariaValueMin]="10"  #age="ngModel"  >
+  </mat-form-field>
+  <div *ngIf=" age.errors?.['minlength']">
+    <mat-error>Age is required</mat-error> 
+   </div>
+<div class="mt-3">
+        <button type="submit" mat-raised-button [disabled]="">Send</button>&nbsp;
+      <button type="button"  mat-raised-button color="warn" (click)="onNoClick()">Close</button>
+</div> 
+</form>
